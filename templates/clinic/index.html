@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{name}} - {{tagline}}">
+  <title>{{name}}</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">{{name}}</a>
+      <button class="nav-toggle" id="navToggle" aria-label="選單">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#menu">菜單</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200') center/cover no-repeat;"></div>
+    </div>
+    <div class="hero-content">
+      <h1>{{name}}</h1>
+      <p class="tagline">{{tagline}}</p>
+      <a href="#contact" class="btn-primary">立即訂位</a>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn prev" id="prevSlide">❮</button>
+      <button class="slider-btn next" id="nextSlide">❯</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">關於我們</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>歡迎來到 {{name}}！我們致力於為您提供最美味的料理與最温暖的用餐體驗。每一道菜品都經過主廚精心烹調，選用最新鮮的食材，讓您品嚐到幸福的滋味。</p>
+          <p>無論是家庭聚會、商務用餐，或是浪漫的兩人世界，我們都為您準備了最舒適的空間與最用心的服務。</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="餐廳內部">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">精選菜單</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="精選主餐">
+          <h3>香煎牛排套餐</h3>
+          <p class="price">NT$ 580</p>
+          <p class="desc">choice等級牛排，搭配季節蔬菜與特製醬汁</p>
+        </div>
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400" alt="義大利麵">
+          <h3>奶油培根義大利麵</h3>
+          <p class="price">NT$ 320</p>
+          <p class="desc">手工製作義大利麵，濃郁奶油醬汁</p>
+        </div>
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400" alt="沙拉">
+          <h3>凱撒沙拉</h3>
+          <p class="price">NT$ 220</p>
+          <p class="desc">新鮮時蔬，附手工脆餅與帕瑪森起司</p>
+        </div>
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400" alt="甜點">
+          <h3>提拉米蘇</h3>
+          <p class="price">NT$ 150</p>
+          <p class="desc">經典義式甜點，濃郁咖啡香</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">營業時間</h2>
+      <div class="hours-list">
+        {{#hours}}
+        <div class="hours-item">
+          <span class="day">{{day}}</span>
+          <span class="time">{{time}}</span>
+        </div>
+        {{/hours}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">聯絡我們</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="icon">📍</span>
+            <div>
+              <strong>地址</strong>
+              <p>{{address}}</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">📞</span>
+            <div>
+              <strong>電話</strong>
+              <p><a href="tel:{{phone}}">{{phone}}</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:{{email}}">{{email}}</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">💬</span>
+            <div>
+              <strong>LINE</strong>
+              <p><a href="https://line.me/ti/p/~{{line_id}}" target="_blank">{{line_id}}</a></p>
+            </div>
+          </div>
+          <a href="https://line.me/ti/p/~{{line_id}}" target="_blank" class="btn-line">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
+            加入 LINE 諮詢
+          </a>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+              <label for="name">姓名</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">電話</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="message">訊息</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">送出訊息</button>
+          </form>
+        </div>
+        <div class="contact-map">
+          <iframe src="{{map_embed}}" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>{{name}}</h3>
+          <p>{{tagline}}</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">首頁</a>
+          <a href="#about">關於我們</a>
+          <a href="#menu">菜單</a>
+          <a href="#contact">聯絡我們</a>
+        </div>
+        <div class="footer-social">
+          {{#social.facebook}}
+          <a href="{{social.facebook}}" target="_blank" aria-label="Facebook">📘</a>
+          {{/social.facebook}}
+          {{#social.instagram}}
+          <a href="{{social.instagram}}" target="_blank" aria-label="Instagram">📷</a>
+          {{/social.instagram}}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 {{name}} All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

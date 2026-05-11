@@ -1,0 +1,20 @@
+{
+  "name": "好鄰居商行",
+  "tagline": "在地服務，温暖每一個角落",
+  "owner": "張志偉",
+  "phone": "05-789-0123",
+  "email": "info@goodneighbor.com",
+  "line_id": "@goodneighbor",
+  "address": "嘉義市東區文化路321號",
+  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610!2d120.4500!3d23.4800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI4JzQ4LjAiTiAxMjDCsDI3JzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
+  "hours": [
+    {"day": "週一至週六", "time": "09:00 - 18:00"},
+    {"day": "週日", "time": "公休"}
+  ],
+  "social": {
+    "facebook": "",
+    "instagram": ""
+  },
+  "primary_color": "#4CAF50",
+  "secondary_color": "#1B5E20"
+}

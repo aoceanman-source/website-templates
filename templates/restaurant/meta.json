@@ -1,0 +1,94 @@
+{
+  "name": "甜蜜時光餐廳",
+  "tagline": "用心料理，甜蜜每一刻",
+  "owner": "陳小明",
+  "phone": "02-1234-5678",
+  "email": "contact@sweetmoment.com",
+  "line_id": "@sweetmoment",
+  "address": "台北市大安區仁愛路123號",
+  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d121.5431!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzAwLjAiTiAxMjHCsDMzJzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
+  "hours": [
+    {"day": "週一至週五", "time": "11:00 - 21:00"},
+    {"day": "週六、週日", "time": "10:00 - 22:00"}
+  ],
+  "social": {
+    "facebook": "https://facebook.com/sweetmoment",
+    "instagram": "https://instagram.com/sweetmoment"
+  },
+  "primary_color": "#D4A574",
+  "secondary_color": "#8B4513",
+  "menu_items": [
+    {
+      "id": "menu-001",
+      "name": "香煎choice肋眼牛排",
+      "category": "主廚推薦",
+      "description": "精選美國 Choice 等級肋眼牛排，經過乾式熟成14天後香煎，鎖住肉汁精華。搭配迷迭香奶油與季節烤蔬菜，濃郁的牛肉風味與香料完美融合，帶給您極致的味蕾享受。",
+      "price": 880,
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600",
+      "allergens": ["dairy"]
+    },
+    {
+      "id": "menu-002",
+      "name": "蒜香奶油鮮蝦義大利麵",
+      "category": "義式料理",
+      "description": "使用義大利進口杜蘭小麥製作的寬麵，拌入新鮮大白蝦、蒜香奶油醬與帕瑪森起司。蝦肉鮮甜Q彈，蒜香濃郁而不嗆，是一道令人回味無窮的經典義式料理。",
+      "price": 380,
+      "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600",
+      "allergens": ["seafood", "gluten", "dairy"]
+    },
+    {
+      "id": "menu-003",
+      "name": "松露野菇炖飯",
+      "category": "義式料理",
+      "description": "採用義大利進口Arborio米，慢火炖煮加入新鮮松露醬與多種野菇。奶香濃郁，米粒保有彈牙口感，每一口都散發著高雅的松露香氣，適合素食者享用。",
+      "price": 420,
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600",
+      "allergens": ["gluten", "dairy"]
+    },
+    {
+      "id": "menu-004",
+      "name": "凱撒沙拉 with 脆培根",
+      "category": "前菜沙拉",
+      "description": "新鮮羅蔓生菜、帕瑪森起司薄片、手工脆餅，淋上特製凱撒沙拉醬。香脆培根增添鹹香口感，撒上新鮮研磨的黑胡椒，是一道清爽開胃的經典沙拉。",
+      "price": 220,
+      "image": "https://images.unsplash.com/photo-1512852939750-1305098529bf?w=600",
+      "allergens": ["gluten", "dairy", "egg"]
+    },
+    {
+      "id": "menu-005",
+      "name": "北海道干貝海膽軍艦",
+      "category": "日式海鮮",
+      "description": "嚴選北海道新鮮干貝與馬糞海膽，底部鋪設醋飯再以海苔包覆。干貝軟嫩、海膽鮮甜，一口咬下就能感受大海的鮮美，適合喜歡海鮮的老饕。",
+      "price": 520,
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600",
+      "allergens": ["seafood", "soy"]
+    },
+    {
+      "id": "menu-006",
+      "name": "焦糖布蕾",
+      "category": "甜點",
+      "description": "法式傳統甜點，使用新鮮雞蛋與香草莢慢火烘烤。上桌前現烤焦糖脆殼，敲開時發出清脆聲響，內裡是滑嫩細緻的布蕾，是完美的餐後甜點。",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600",
+      "allergens": ["dairy", "egg"]
+    },
+    {
+      "id": "menu-007",
+      "name": "堅果塔",
+      "category": "甜點",
+      "description": "酥脆的塔皮裡填滿了杏仁、核桃、腰果與夏威夷豆的堅果內餡，裹上楓糖漿烘烤。香甜酥脆，堅果香氣濃郁，是喜歡堅果者不可錯過的甜點。",
+      "price": 130,
+      "image": "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600",
+      "allergens": ["nuts", "gluten", "dairy"]
+    },
+    {
+      "id": "menu-008",
+      "name": "酥炸軟殼蟹",
+      "category": "開胃小點",
+      "description": "整隻軟殼蟹裹上特製麵衣酥炸至金黃酥脆。可直接食用，無需剝殼。搭配塔塔醬與檸檬角，蟹香濃郁，是一道大人小孩都喜愛的下酒好菜。",
+      "price": 280,
+      "image": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?w=600",
+      "allergens": ["seafood", "gluten", "egg"]
+    }
+  ]
+}
