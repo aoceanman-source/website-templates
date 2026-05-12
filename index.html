@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>網站模板展示</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { color: #94a3b8; margin-bottom: 3rem; font-size: 1.1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; width: 100%; }
+    .card { background: #1e293b; border-radius: 16px; padding: 2rem; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .card .icon { font-size: 3rem; }
+    .card h2 { font-size: 1.3rem; color: #f1f5f9; }
+    .card p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
+    .card .tag { background: #334155; color: #94a3b8; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; width: fit-content; }
+    .card.restaurant:hover { border: 1px solid #f97316; box-shadow: 0 20px 40px rgba(249,115,22,0.15); }
+    .card.beauty:hover { border: 1px solid #ec4899; box-shadow: 0 20px 40px rgba(236,72,153,0.15); }
+    .card.clinic:hover { border: 1px solid #10b981; box-shadow: 0 20px 40px rgba(16,185,129,0.15); }
+    .card.general:hover { border: 1px solid #3b82f6; box-shadow: 0 20px 40px rgba(59,130,246,0.15); }
+    .footer { margin-top: 3rem; color: #475569; font-size: 0.85rem; }
+    .footer a { color: #64748b; text-decoration: none; }
+    .footer a:hover { color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <h1>🌐 網站模板展示</h1>
+  <p class="subtitle">使用純 HTML/CSS/JS 的響應式網站模板</p>
+  <div class="grid">
+    <a href="output/restaurant/" class="card restaurant">
+      <span class="icon">🍜</span>
+      <h2>餐廳官網</h2>
+      <p>含菜單展示、過敏原標籤、圖片輪播、聯絡表單、Google Maps</p>
+      <span class="tag">RWD · LINE 諮詢 · 可點擊展開菜單</span>
+    </a>
+    <a href="output/beauty/" class="card beauty">
+      <span class="icon">💇</span>
+      <h2>美容業官網</h2>
+      <p>服務項目展示、預約表單、作品集、評論區塊</p>
+      <span class="tag">RWD · LINE 諮詢 · Google Maps</span>
+    </a>
+    <a href="output/clinic/" class="card clinic">
+      <span class="icon">🏥</span>
+      <h2>診所官網</h2>
+      <p>門診時間、醫師介紹、掛號連結、症狀分類</p>
+      <span class="tag">RWD · LINE 諮詢 · Google Maps</span>
+    </a>
+    <a href="output/general/" class="card general">
+      <span class="icon">🏢</span>
+      <h2>通用官網</h2>
+      <p>基本公司頁面、服務項目、團隊介紹、聯絡方式</p>
+      <span class="tag">RWD · LINE 諮詢 · Google Maps</span>
+    </a>
+  </div>
+  <p class="footer">
+    由 <a href="https://github.com/aoceanman-source">@aoceanman-source</a> 用 Python + HTML/CSS/JS 自動生成
+  </p>
+</body>
+</html>
