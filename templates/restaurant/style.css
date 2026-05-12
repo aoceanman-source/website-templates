@@ -178,10 +178,10 @@ ul { list-style: none; }
 .menu-card {
   background: var(--white);
   border-radius: var(--radius);
-  overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  overflow: visible;
 }
 
 .menu-card:hover {
@@ -200,6 +200,7 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: visible;
 }
 
 /* Thumbnail */
@@ -357,6 +358,11 @@ ul { list-style: none; }
 .detail-image {
   height: 220px;
   overflow: hidden;
+  border-radius: 0;
+}
+
+.menu-card.expanded .detail-image {
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .detail-image img {
