@@ -191,6 +191,9 @@ ul { list-style: none; }
 
 .menu-card.expanded {
   grid-column: span 1;
+  overflow: visible;
+  z-index: 10;
+  position: relative;
 }
 
 .menu-card-inner {
@@ -340,11 +343,11 @@ ul { list-style: none; }
 .menu-card-detail {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-card.expanded .menu-card-detail {
-  max-height: 700px;
+  max-height: 1200px;
 }
 
 .menu-card.expanded .expand-icon {
