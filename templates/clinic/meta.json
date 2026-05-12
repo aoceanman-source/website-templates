@@ -6,11 +6,37 @@
   "email": "service@healthclinic.com",
   "line_id": "@healthclinic",
   "address": "新北市板橋區中山路789號",
-  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5431!3d25.0120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAwJzQ4LjAiTiAxMjHCsDMzJzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
+  "departments": ["家庭醫學科", "眼科", "耳鼻喉科"],
   "hours": [
     {"day": "週一至週五", "time": "08:00 - 17:00"},
     {"day": "週六", "time": "08:00 - 12:00"},
     {"day": "週日", "time": "公休"}
+  ],
+  "insurance": ["全民健康保險", "勞工保險", "學生保險"],
+  "doctors": [
+    {
+      "name": "王建民 醫師",
+      "title": "家庭醫學科主任",
+      "education": "台大醫學院醫學系畢業",
+      "experience": "前台北榮總家庭醫學科主治醫師，20年臨床經驗"
+    },
+    {
+      "name": "陳美玲 醫師",
+      "title": "眼科主治醫師",
+      "education": "成大醫學院眼科碩士",
+      "experience": "前高雄長庚眼科主治醫師，專精白內障與近視雷射手術"
+    },
+    {
+      "name": "林志偉 醫師",
+      "title": "耳鼻喉科主治醫師",
+      "education": "馬偕醫學院醫學系畢業",
+      "experience": "前林口長庚耳鼻喉科主治醫師，專精過敏性鼻炎與睡眠呼吸中止症"
+    }
+  ],
+  "symptoms": [
+    {"category": "一般門診", "items": ["感冒發燒", "頭痛眩暈", "腸胃不適", "高血壓、糖尿病慢性病控制"]},
+    {"category": "眼科", "items": ["視力模糊", "眼睛乾澀", "白內障術後追蹤", "學童視力保健"]},
+    {"category": "耳鼻喉科", "items": ["過敏性鼻炎", "慢性咳嗽", "耳鳴眩暈", "口腔喉嚨不適"]}
   ],
   "social": {
     "facebook": "",

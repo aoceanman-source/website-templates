@@ -19,8 +19,8 @@
       </button>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home">首頁</a></li>
-        <li><a href="#about">關於我們</a></li>
-        <li><a href="#menu">菜單</a></li>
+        <li><a href="#departments">科別介紹</a></li>
+        <li><a href="#doctors">醫師介紹</a></li>
         <li><a href="#contact">聯絡我們</a></li>
       </ul>
     </div>
@@ -29,14 +29,14 @@
   <!-- Hero Section -->
   <header id="home" class="hero">
     <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200') center/cover no-repeat;"></div>
+      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1586773860418-d37222d8f0e3?w=1200') center/cover no-repeat;"></div>
     </div>
     <div class="hero-content">
       <h1>{{name}}</h1>
       <p class="tagline">{{tagline}}</p>
-      <a href="#contact" class="btn-primary">立即訂位</a>
+      <a href="#contact" class="btn-primary">電話預約</a>
     </div>
     <div class="slider-controls">
       <button class="slider-btn prev" id="prevSlide">❮</button>
@@ -44,51 +44,53 @@
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- Departments Section -->
+  <section id="departments" class="section bg-light">
     <div class="container">
-      <h2 class="section-title">關於我們</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>歡迎來到 {{name}}！我們致力於為您提供最美味的料理與最温暖的用餐體驗。每一道菜品都經過主廚精心烹調，選用最新鮮的食材，讓您品嚐到幸福的滋味。</p>
-          <p>無論是家庭聚會、商務用餐，或是浪漫的兩人世界，我們都為您準備了最舒適的空間與最用心的服務。</p>
+      <h2 class="section-title">科別介紹</h2>
+      <div class="menu-grid">
+        {{#departments}}
+        <div class="menu-card">
+          <h3>{{.}}</h3>
+          <p class="desc">由專業醫師團隊為您提供優質醫療服務，守護您與家人的健康</p>
         </div>
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="餐廳內部">
-        </div>
+        {{/departments}}
       </div>
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section id="menu" class="section bg-light">
+  <!-- Symptoms Section -->
+  <section class="section">
     <div class="container">
-      <h2 class="section-title">精選菜單</h2>
+      <h2 class="section-title">服務項目</h2>
+      <div class="about-grid">
+        {{#symptoms}}
+        <div class="about-text">
+          <h3>{{category}}</h3>
+          <ul>
+            {{#items}}
+            <li>{{.}}</li>
+            {{/items}}
+          </ul>
+        </div>
+        {{/symptoms}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">醫師團隊</h2>
       <div class="menu-grid">
+        {{#doctors}}
         <div class="menu-card">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="精選主餐">
-          <h3>香煎牛排套餐</h3>
-          <p class="price">NT$ 580</p>
-          <p class="desc">choice等級牛排，搭配季節蔬菜與特製醬汁</p>
+          <h3>{{name}}</h3>
+          <p class="price">{{title}}</p>
+          <p class="desc"><strong>學歷：</strong>{{education}}</p>
+          <p class="desc"><strong>經歷：</strong>{{experience}}</p>
         </div>
-        <div class="menu-card">
-          <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400" alt="義大利麵">
-          <h3>奶油培根義大利麵</h3>
-          <p class="price">NT$ 320</p>
-          <p class="desc">手工製作義大利麵，濃郁奶油醬汁</p>
-        </div>
-        <div class="menu-card">
-          <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400" alt="沙拉">
-          <h3>凱撒沙拉</h3>
-          <p class="price">NT$ 220</p>
-          <p class="desc">新鮮時蔬，附手工脆餅與帕瑪森起司</p>
-        </div>
-        <div class="menu-card">
-          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400" alt="甜點">
-          <h3>提拉米蘇</h3>
-          <p class="price">NT$ 150</p>
-          <p class="desc">經典義式甜點，濃郁咖啡香</p>
-        </div>
+        {{/doctors}}
       </div>
     </div>
   </section>
@@ -96,7 +98,7 @@
   <!-- Hours Section -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">營業時間</h2>
+      <h2 class="section-title">門診時間</h2>
       <div class="hours-list">
         {{#hours}}
         <div class="hours-item">
@@ -144,7 +146,7 @@
           </div>
           <a href="https://line.me/ti/p/~{{line_id}}" target="_blank" class="btn-line">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
-            加入 LINE 諮詢
+            加入 LINE 預約
           </a>
         </div>
         <div class="contact-form">
@@ -162,10 +164,10 @@
               <input type="email" id="email" name="email">
             </div>
             <div class="form-group">
-              <label for="message">訊息</label>
+              <label for="message">看診科別與症狀</label>
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn-submit">送出訊息</button>
+            <button type="submit" class="btn-submit">送出預約</button>
           </form>
         </div>
         <div class="contact-map">
@@ -185,8 +187,8 @@
         </div>
         <div class="footer-links">
           <a href="#home">首頁</a>
-          <a href="#about">關於我們</a>
-          <a href="#menu">菜單</a>
+          <a href="#departments">科別介紹</a>
+          <a href="#doctors">醫師團隊</a>
           <a href="#contact">聯絡我們</a>
         </div>
         <div class="footer-social">

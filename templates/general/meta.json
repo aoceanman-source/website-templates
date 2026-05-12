@@ -1,19 +1,62 @@
 {
-  "name": "好鄰居商行",
-  "tagline": "在地服務，温暖每一個角落",
-  "owner": "張志偉",
-  "phone": "05-789-0123",
-  "email": "info@goodneighbor.com",
-  "line_id": "@goodneighbor",
-  "address": "嘉義市東區文化路321號",
-  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610!2d120.4500!3d23.4800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDI4JzQ4LjAiTiAxMjDCsDI3JzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
+  "name": "創新科技有限公司",
+  "tagline": "用科技創造價值，讓改變持續發生",
+  "owner": "陳志遠",
+  "phone": "02-8772-1234",
+  "email": "contact@innovatetech.tw",
+  "line_id": "@innovatetech",
+  "address": "台北市內湖區瑞光路366號18樓",
   "hours": [
-    {"day": "週一至週六", "time": "09:00 - 18:00"},
-    {"day": "週日", "time": "公休"}
+    {"day": "週一至週五", "time": "09:00 - 18:00"},
+    {"day": "週六、週日", "time": "公休"}
+  ],
+  "services": [
+    {
+      "name": "客製化網站開發",
+      "description": "從企業形象網站到電子商務平台，打造專屬您的線上品牌",
+      "price": "NT$ 50,000 起"
+    },
+    {
+      "name": "系統整合服務",
+      "description": "ERP、CRM既有系統對接，串接金流、物流、會員系統",
+      "price": "NT$ 80,000 起"
+    },
+    {
+      "name": "資訊顧問諮詢",
+      "description": "資安評估、系統健檢、數位轉型規劃，由資深顧問一對一服務",
+      "price": "NT$ 3,000/小時"
+    },
+    {
+      "name": "APP行動應用開發",
+      "description": "iOS/Android原生及跨平台應用開發，支援上架一條龍服務",
+      "price": "NT$ 120,000 起"
+    }
+  ],
+  "team": [
+    {
+      "name": "陳志遠",
+      "title": "執行長",
+      "bio": "台灣大學資訊工程研究所畢業，曾任聯發科資深工程師，連續創業家"
+    },
+    {
+      "name": "黃怡君",
+      "title": "技術總監",
+      "bio": "清華大學資訊系畢業，15年網頁與系統開發經驗，專精雲端架構設計"
+    },
+    {
+      "name": "劉明哲",
+      "title": "產品總監",
+      "bio": "交大管理研究所畢業，過去於Google擔任產品經理，擅長用戶體驗優化"
+    },
+    {
+      "name": "林雨彤",
+      "title": "設計總監",
+      "bio": "皇家藝術學院互動設計碩士，曾參與多個國際品牌視覺形象規劃"
+    }
   ],
   "social": {
-    "facebook": "",
-    "instagram": ""
+    "facebook": "https://facebook.com/innovatetech",
+    "instagram": "https://instagram.com/innovatetech.tw"
   },
   "primary_color": "#4CAF50",
   "secondary_color": "#1B5E20"

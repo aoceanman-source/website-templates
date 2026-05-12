@@ -1,19 +1,61 @@
 {
-  "name": "美麗人生美容工作室",
+  "name": "完美美學工作室",
   "tagline": "呵護肌膚，綻放自信光彩",
   "owner": "林雅琪",
-  "phone": "04-9876-5432",
-  "email": "hello@beautylife.com",
-  "line_id": "@beautylife",
-  "address": "台中市西區精誠路456號",
-  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640!2d120.6482!3d24.1477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDA4JzUwLjAiTiAxMjDCsDM4JzU3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
+  "phone": "02-2765-4321",
+  "email": "hello@perfectbeauty.tw",
+  "line_id": "@perfectbeauty",
+  "address": "台北市大安區忠孝東路四段101號12樓",
+  "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw",
   "hours": [
-    {"day": "週一至週六", "time": "10:00 - 20:00"},
+    {"day": "週一至週六", "time": "11:00 - 20:00"},
     {"day": "週日", "time": "公休"}
   ],
+  "services": [
+    {
+      "name": "精緻美甲套餐",
+      "description": "包含修甲、甲型塑造、凝膠上色，採用日本頂級甲膠，持久亮麗不脫落",
+      "price": "NT$ 1,200"
+    },
+    {
+      "name": "夢幻睫毛嫁接",
+      "description": "採用韓國進口蠶絲蛋白睫毛，自然捲翹效果可維持4-6週",
+      "price": "NT$ 1,500"
+    },
+    {
+      "name": "巴西熱蠟除毛",
+      "description": "採用義大利原裝進口純天然熱蠟，溫和除毛無刺痛，呵護敏感肌膚",
+      "price": "NT$ 800"
+    },
+    {
+      "name": "深層面部保濕護理",
+      "description": "韓國最新氫分子導入技術，深層補水同時緊緻毛孔，讓肌膚煥發光采",
+      "price": "NT$ 2,000"
+    },
+    {
+      "name": "微晶煥膚課程",
+      "description": "利用天然礦物結晶溫和去除老廢角質，術後肌膚光滑細嫩",
+      "price": "NT$ 1,800"
+    },
+    {
+      "name": "凍齡緊緻拉提",
+      "description": "韓國LG專利射頻技術，非侵入式課程，術後立即感受臉部輪廓提升",
+      "price": "NT$ 3,500"
+    },
+    {
+      "name": "新娘造型專案",
+      "description": "婚禮前一個月保養課程，含美甲、睫毛嫁接、面部護理全套服務",
+      "price": "NT$ 12,000"
+    },
+    {
+      "name": "美睫網紅攝影專案",
+      "description": "為網紅、部落客設計的上鏡妝容課程，含睫毛、眼部、眼窩一站式服務",
+      "price": "NT$ 4,500"
+    }
+  ],
   "social": {
-    "facebook": "https://facebook.com/beautylife",
-    "instagram": "https://instagram.com/beautylife"
+    "facebook": "https://facebook.com/perfectbeauty",
+    "instagram": "https://instagram.com/perfectbeauty.tw"
   },
   "primary_color": "#E91E8C",
   "secondary_color": "#8B007D"
