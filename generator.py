@@ -50,6 +50,20 @@ def render_template(template_path, meta):
                 hours_html += item
             content = re.sub(r'{{#hours}}.*?{{/hours}}', hours_html, content, flags=re.DOTALL)
     
+    # Handle news array (beauty template)
+    if '{{#news}}' in content:
+        news_block_match = re.search(r'{{#news}}(.*?){{/news}}', content, re.DOTALL)
+        if news_block_match:
+            news_block = news_block_match.group(1)
+            news_html = ''
+            for n in meta.get('news', []):
+                item = news_block
+                item = item.replace('{{date}}', n.get('date', ''))
+                item = item.replace('{{title}}', n.get('title', ''))
+                item = item.replace('{{description}}', n.get('description', ''))
+                news_html += item
+            content = re.sub(r'{{#news}}.*?{{/news}}', news_html, content, flags=re.DOTALL)
+    
     # Handle services array (beauty/general templates)
     if '{{#services}}' in content:
         services_block_match = re.search(r'{{#services}}(.*?){{/services}}', content, re.DOTALL)

@@ -11,6 +11,7 @@
     {"day": "週一至週六", "time": "11:00 - 20:00"},
     {"day": "週日", "time": "公休"}
   ],
+  "years": "8",
   "services": [
     {
       "name": "精緻美甲套餐",
@@ -57,6 +58,23 @@
     "facebook": "https://facebook.com/perfectbeauty",
     "instagram": "https://instagram.com/perfectbeauty.tw"
   },
+  "news": [
+    {
+      "date": "2026.05.10",
+      "title": "夏季肌膚保養指南｜如何挑選適合自己的護理課程",
+      "description": "炎炎夏日，肌膚容易出油、毛孔粗大。本工作室提供多種夏季限定護理方案，由專業美容師為您客製化適合的課程。"
+    },
+    {
+      "date": "2026.05.01",
+      "title": "母親節特惠活動｜母女同行第二件半價",
+      "description": "感謝媽媽一路以來的付出，母親節期間母女同行享有第二件服務半價優惠，趕快預約與媽媽一起變美吧！"
+    },
+    {
+      "date": "2026.04.20",
+      "title": "引進韓國最新氫分子導入儀器",
+      "description": "本工作室最新引進韓國原廠氫分子導入儀器，能深層清潔毛孔、补充水分，讓肌膚由內而外煥發光采。"
+    }
+  ],
   "primary_color": "#E91E8C",
   "secondary_color": "#8B007D"
 }

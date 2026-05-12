@@ -8,12 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">完美美學工作室</a>
+      <a href="#" class="logo">
+        <i class="fas fa-spa"></i> 完美美學工作室
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="選單">
         <span></span><span></span><span></span>
       </button>
@@ -21,108 +24,267 @@
         <li><a href="#home">首頁</a></li>
         <li><a href="#services">服務項目</a></li>
         <li><a href="#about">關於我們</a></li>
+        <li><a href="#news">最新消息</a></li>
         <li><a href="#contact">聯絡我們</a></li>
       </ul>
+      <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-nav-line">
+        <i class="fab fa-line"></i> 立即預約
+      </a>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <header id="home" class="hero">
     <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1516975080664-edaf09a65491?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1487412947147-c0e0c71d2967?w=1200') center/cover no-repeat;"></div>
+      <div class="slide active" style="background: linear-gradient(135deg, rgba(233,30,140,0.7), rgba(139,0,125,0.8)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(135deg, rgba(233,30,140,0.7), rgba(139,0,125,0.8)), url('https://images.unsplash.com/photo-1516975080664-edaf09a65491?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(135deg, rgba(233,30,140,0.7), rgba(139,0,125,0.8)), url('https://images.unsplash.com/photo-1487412947147-c0e0c71d2967?w=1200') center/cover no-repeat;"></div>
     </div>
     <div class="hero-content">
+      <p class="hero-subtitle">專業美容團隊 · 先進設備 · 頂級保養品</p>
       <h1>完美美學工作室</h1>
       <p class="tagline">呵護肌膚，綻放自信光彩</p>
-      <a href="#services" class="btn-primary">探索服務</a>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">探索服務</a>
+        <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-outline">
+          <i class="fab fa-line"></i> LINE 預約
+        </a>
+      </div>
     </div>
     <div class="slider-controls">
       <button class="slider-btn prev" id="prevSlide">❮</button>
       <button class="slider-btn next" id="nextSlide">❯</button>
     </div>
+    <div class="hero-scroll-hint">
+      <span>向下滑動</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ABOUT US</span>
+        <h2 class="section-title">關於我們</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>呵護肌膚，綻放自信光彩</h3>
+          <p>歡迎來到 完美美學工作室！我們是一間專注於美麗與健康的專業美容工作室。</p>
+          <p>每一位師資都擁有日本、香港認證的專業技術，引進韓國最新美容儀器，選用日本與歐美頂級保養品，為您提供安全、舒適、專業的服務體驗。</p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-award"></i>
+              <span>日本/香港專業認證</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-flask"></i>
+              <span>韓國最新美容儀器</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-leaf"></i>
+              <span>日本/歐美頂級保養品</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600" alt="美容工作室內部">
+          <div class="about-image-badge">
+            <span class="badge-number">8</span>
+            <span class="badge-text">年專業經驗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Services Section -->
   <section id="services" class="section bg-light">
     <div class="container">
-      <h2 class="section-title">精選服務項目</h2>
-      <div class="menu-grid">
+      <div class="section-header">
+        <span class="section-tag">SERVICES</span>
+        <h2 class="section-title">精選服務項目</h2>
+        <p class="section-desc">我們提供多樣化的美容服務，由專業團隊為您打造專屬美麗方案</p>
+      </div>
+      <div class="services-grid">
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>精緻美甲套餐</h3>
-          <p class="price">NT$ 1,200</p>
-          <p class="desc">包含修甲、甲型塑造、凝膠上色，採用日本頂級甲膠，持久亮麗不脫落</p>
+          <p class="service-desc">包含修甲、甲型塑造、凝膠上色，採用日本頂級甲膠，持久亮麗不脫落</p>
+          <p class="service-price">NT$ 1,200</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>夢幻睫毛嫁接</h3>
-          <p class="price">NT$ 1,500</p>
-          <p class="desc">採用韓國進口蠶絲蛋白睫毛，自然捲翹效果可維持4-6週</p>
+          <p class="service-desc">採用韓國進口蠶絲蛋白睫毛，自然捲翹效果可維持4-6週</p>
+          <p class="service-price">NT$ 1,500</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>巴西熱蠟除毛</h3>
-          <p class="price">NT$ 800</p>
-          <p class="desc">採用義大利原裝進口純天然熱蠟，溫和除毛無刺痛，呵護敏感肌膚</p>
+          <p class="service-desc">採用義大利原裝進口純天然熱蠟，溫和除毛無刺痛，呵護敏感肌膚</p>
+          <p class="service-price">NT$ 800</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>深層面部保濕護理</h3>
-          <p class="price">NT$ 2,000</p>
-          <p class="desc">韓國最新氫分子導入技術，深層補水同時緊緻毛孔，讓肌膚煥發光采</p>
+          <p class="service-desc">韓國最新氫分子導入技術，深層補水同時緊緻毛孔，讓肌膚煥發光采</p>
+          <p class="service-price">NT$ 2,000</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>微晶煥膚課程</h3>
-          <p class="price">NT$ 1,800</p>
-          <p class="desc">利用天然礦物結晶溫和去除老廢角質，術後肌膚光滑細嫩</p>
+          <p class="service-desc">利用天然礦物結晶溫和去除老廢角質，術後肌膚光滑細嫩</p>
+          <p class="service-price">NT$ 1,800</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>凍齡緊緻拉提</h3>
-          <p class="price">NT$ 3,500</p>
-          <p class="desc">韓國LG專利射頻技術，非侵入式課程，術後立即感受臉部輪廓提升</p>
+          <p class="service-desc">韓國LG專利射頻技術，非侵入式課程，術後立即感受臉部輪廓提升</p>
+          <p class="service-price">NT$ 3,500</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>新娘造型專案</h3>
-          <p class="price">NT$ 12,000</p>
-          <p class="desc">婚禮前一個月保養課程，含美甲、睫毛嫁接、面部護理全套服務</p>
+          <p class="service-desc">婚禮前一個月保養課程，含美甲、睫毛嫁接、面部護理全套服務</p>
+          <p class="service-price">NT$ 12,000</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
-        <div class="menu-card">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-star"></i>
+          </div>
           <h3>美睫網紅攝影專案</h3>
-          <p class="price">NT$ 4,500</p>
-          <p class="desc">為網紅、部落客設計的上鏡妝容課程，含睫毛、眼部、眼窩一站式服務</p>
+          <p class="service-desc">為網紅、部落客設計的上鏡妝容課程，含睫毛、眼部、眼窩一站式服務</p>
+          <p class="service-price">NT$ 4,500</p>
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-service">
+            <i class="fab fa-line"></i> 立即預約
+          </a>
         </div>
         
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- Why Choose Us -->
+  <section class="section section-dark">
     <div class="container">
-      <h2 class="section-title">關於我們</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>歡迎來到 完美美學工作室！我們是一間專注於美麗與健康的專業美容工作室。</p>
-          <p>每一位師資都擁有日本、香港認證的專業技術，引進韓國最新美容儀器，選用日本與歐美頂級保養品，為您提供安全、舒適、專業的服務體驗。</p>
-          <p>我們相信，每位走進來的顧客都值得被呵護。歡迎預約諮詢，讓我們為您打造專屬的美麗方案。</p>
+      <div class="section-header">
+        <span class="section-tag">WHY CHOOSE US</span>
+        <h2 class="section-title">為什麼選擇我們</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-user-tie"></i>
+          <h3>專業師資</h3>
+          <p>每位師資皆具備日本、香港國際認證，技術與美學兼備</p>
         </div>
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600" alt="美容工作室內部">
+        <div class="feature-card">
+          <i class="fas fa-microscope"></i>
+          <h3>頂級設備</h3>
+          <p>引進韓國最新美容儀器，科學護膚，效果看得見</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-gem"></i>
+          <h3>優質保養品</h3>
+          <p>嚴選日本與歐美頂級保養品，呵護嬌嫩肌膚</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-heart"></i>
+          <h3>貼心服務</h3>
+          <p>一對一專業諮詢，打造專屬您的美麗方案</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NEWS</span>
+        <h2 class="section-title">最新消息</h2>
+      </div>
+      <div class="news-grid">
+        
+        <div class="news-card">
+          <span class="news-date">2026.05.10</span>
+          <h3>夏季肌膚保養指南｜如何挑選適合自己的護理課程</h3>
+          <p>炎炎夏日，肌膚容易出油、毛孔粗大。本工作室提供多種夏季限定護理方案，由專業美容師為您客製化適合的課程。</p>
+        </div>
+        
+        <div class="news-card">
+          <span class="news-date">2026.05.01</span>
+          <h3>母親節特惠活動｜母女同行第二件半價</h3>
+          <p>感謝媽媽一路以來的付出，母親節期間母女同行享有第二件服務半價優惠，趕快預約與媽媽一起變美吧！</p>
+        </div>
+        
+        <div class="news-card">
+          <span class="news-date">2026.04.20</span>
+          <h3>引進韓國最新氫分子導入儀器</h3>
+          <p>本工作室最新引進韓國原廠氫分子導入儀器，能深層清潔毛孔、补充水分，讓肌膚由內而外煥發光采。</p>
+        </div>
+        
+        <div class="news-card news-more">
+          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank">
+            <i class="fas fa-plus"></i>
+            <span>看更多最新消息</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Hours Section -->
-  <section class="section">
+  <section class="section bg-light">
     <div class="container">
-      <h2 class="section-title">營業時間</h2>
+      <div class="section-header">
+        <span class="section-tag">HOURS</span>
+        <h2 class="section-title">營業時間</h2>
+      </div>
       <div class="hours-list">
         
         <div class="hours-item">
@@ -140,45 +302,45 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section bg-light">
+  <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">聯絡我們</h2>
+      <div class="section-header">
+        <span class="section-tag">CONTACT</span>
+        <h2 class="section-title">聯絡我們</h2>
+      </div>
       <div class="contact-grid">
         <div class="contact-info">
           <div class="info-item">
-            <span class="icon">📍</span>
+            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
             <div>
               <strong>地址</strong>
               <p>台北市大安區忠孝東路四段101號12樓</p>
             </div>
           </div>
           <div class="info-item">
-            <span class="icon">📞</span>
+            <span class="icon"><i class="fas fa-phone"></i></span>
             <div>
               <strong>電話</strong>
               <p><a href="tel:02-2765-4321">02-2765-4321</a></p>
             </div>
           </div>
           <div class="info-item">
-            <span class="icon">✉️</span>
+            <span class="icon"><i class="fas fa-envelope"></i></span>
             <div>
               <strong>Email</strong>
               <p><a href="mailto:hello@perfectbeauty.tw">hello@perfectbeauty.tw</a></p>
             </div>
           </div>
           <div class="info-item">
-            <span class="icon">💬</span>
+            <span class="icon"><i class="fab fa-line"></i></span>
             <div>
               <strong>LINE</strong>
               <p><a href="https://line.me/ti/p/~@perfectbeauty" target="_blank">@perfectbeauty</a></p>
             </div>
           </div>
-          <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" class="btn-line">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
-            加入 LINE 預約
-          </a>
         </div>
-        <div class="contact-form">
+        <div class="contact-form-wrapper">
+          <h3>預約表單</h3>
           <form id="contactForm" action="#" method="post">
             <div class="form-group">
               <label for="name">姓名</label>
@@ -196,11 +358,13 @@
               <label for="message">想預約的服務</label>
               <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn-submit">送出預約</button>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane"></i> 送出預約
+            </button>
           </form>
         </div>
         <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -211,22 +375,31 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h3>完美美學工作室</h3>
+          <h3><i class="fas fa-spa"></i> 完美美學工作室</h3>
           <p>呵護肌膚，綻放自信光彩</p>
+          <div class="footer-social">
+            {{#social.facebook}}
+            <a href="https://facebook.com/perfectbeauty" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            {{/social.facebook}}
+            {{#social.instagram}}
+            <a href="https://instagram.com/perfectbeauty.tw" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            {{/social.instagram}}
+            <a href="https://line.me/ti/p/~@perfectbeauty" target="_blank" aria-label="LINE"><i class="fab fa-line"></i></a>
+          </div>
         </div>
         <div class="footer-links">
+          <h4>快速連結</h4>
           <a href="#home">首頁</a>
           <a href="#services">服務項目</a>
           <a href="#about">關於我們</a>
+          <a href="#news">最新消息</a>
           <a href="#contact">聯絡我們</a>
         </div>
-        <div class="footer-social">
-          {{#social.facebook}}
-          <a href="https://facebook.com/perfectbeauty" target="_blank" aria-label="Facebook">📘</a>
-          {{/social.facebook}}
-          {{#social.instagram}}
-          <a href="https://instagram.com/perfectbeauty.tw" target="_blank" aria-label="Instagram">📷</a>
-          {{/social.instagram}}
+        <div class="footer-contact">
+          <h4>聯絡資訊</h4>
+          <p><i class="fas fa-phone"></i> 02-2765-4321</p>
+          <p><i class="fas fa-envelope"></i> hello@perfectbeauty.tw</p>
+          <p><i class="fas fa-map-marker-alt"></i> 台北市大安區忠孝東路四段101號12樓</p>
         </div>
       </div>
       <div class="footer-bottom">
