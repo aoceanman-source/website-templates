@@ -1,277 +1,253 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="健康守護診所 - 專業醫療，守護您與家人的健康">
-  <title>健康守護診所</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="健康守護診所 - 專業醫療，守護您與家人的健康">
+<title>健康守護診所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">健康守護診所</a>
-      <button class="nav-toggle" id="navToggle" aria-label="選單">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home">首頁</a></li>
-        <li><a href="#departments">科別介紹</a></li>
-        <li><a href="#doctors">醫師介紹</a></li>
-        <li><a href="#contact">聯絡我們</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header id="home" class="hero">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1586773860418-d37222d8f0e3?w=1200') center/cover no-repeat;"></div>
-    </div>
-    <div class="hero-content">
-      <h1>健康守護診所</h1>
-      <p class="tagline">專業醫療，守護您與家人的健康</p>
-      <a href="#contact" class="btn-primary">電話預約</a>
-    </div>
-    <div class="slider-controls">
-      <button class="slider-btn prev" id="prevSlide">❮</button>
-      <button class="slider-btn next" id="nextSlide">❯</button>
-    </div>
-  </header>
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon">🏥</div>
+    健康守護診所
+  </a>
+  <ul class="nav-links">
+    <li><a href="#departments">科別介紹</a></li>
+    <li><a href="#doctors">醫師介紹</a></li>
+    <li><a href="#contact">聯絡我們</a></li>
+    <li><a href="tel:03-456-7890" class="nav-tel">📞 電話預約</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="nav-mobile" id="navMobile">
+  <a href="#departments" onclick="closeMobile()">科別介紹</a>
+  <a href="#doctors" onclick="closeMobile()">醫師介紹</a>
+  <a href="#contact" onclick="closeMobile()">聯絡我們</a>
+</nav>
 
-  <!-- Departments Section -->
-  <section id="departments" class="section bg-light">
-    <div class="container">
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg-circles">
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+    <div class="hero-circle hero-circle-3"></div>
+  </div>
+  <div class="hero-inner container">
+    <div>
+      <div class="hero-tag">🏥 Since 2005 · 新北市板橋區</div>
+      <h1 class="hero-title">專業醫療<br><em>守護您與家人</em></h1>
+      <p class="hero-subtitle">家庭醫學科、眼科、耳鼻喉科全科診療，由資深醫師團隊為您提供優質醫療服務。</p>
+      <div class="hero-actions">
+        <a href="tel:03-456-7890" class="btn-white">📞 立即預約</a>
+        <a href="#departments" class="btn-ghost">查看科別 →</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card">
+        <div class="hero-card-icon">🩺</div>
+        <div class="hero-card-title">家庭醫學科</div>
+        <div class="hero-card-desc">慢性病控制、健康檢查、預防保健</div>
+        <div class="hero-card-badge">一般門診</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">👁️</div>
+        <div class="hero-card-title">眼科</div>
+        <div class="hero-card-desc">視力保健、白內障、近視雷射追蹤</div>
+        <div class="hero-card-badge">精密儀器</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">👂</div>
+        <div class="hero-card-title">耳鼻喉科</div>
+        <div class="hero-card-desc">過敏性鼻炎、慢性咳嗽、耳鳴眩暈</div>
+        <div class="hero-card-badge">專科治療</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">💊</div>
+        <div class="hero-card-title">慢性處方</div>
+        <div class="hero-card-desc">高血壓、糖尿病長期追蹤管理</div>
+        <div class="hero-card-badge">持續照護</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Departments -->
+<section class="departments section" id="departments">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">Departments</p>
       <h2 class="section-title">科別介紹</h2>
-      <div class="menu-grid">
-        
-        <div class="menu-card">
-          <h3>家庭醫學科</h3>
-          <p class="desc">由專業醫師團隊為您提供優質醫療服務，守護您與家人的健康</p>
+      <div class="divider"></div>
+    </div>
+    <div class="dept-grid">
+      <div class="dept-card reveal">
+        <div class="dept-icon">🩺</div>
+        <div class="dept-name">家庭醫學科</div>
+        <div class="dept-items">
+          <div class="dept-item">感冒發燒、頭痛眩暈</div>
+          <div class="dept-item">腸胃不適</div>
+          <div class="dept-item">高血壓、糖尿病慢性病控制</div>
+          <div class="dept-item">預防保健與健康管理</div>
         </div>
-        
-        <div class="menu-card">
-          <h3>眼科</h3>
-          <p class="desc">由專業醫師團隊為您提供優質醫療服務，守護您與家人的健康</p>
+      </div>
+      <div class="dept-card reveal" style="transition-delay:0.15s">
+        <div class="dept-icon">👁️</div>
+        <div class="dept-name">眼科</div>
+        <div class="dept-items">
+          <div class="dept-item">視力模糊、眼睛乾澀</div>
+          <div class="dept-item">白內障術後追蹤</div>
+          <div class="dept-item">學童視力保健</div>
+          <div class="dept-item">老花眼、飛蚊症</div>
         </div>
-        
-        <div class="menu-card">
-          <h3>耳鼻喉科</h3>
-          <p class="desc">由專業醫師團隊為您提供優質醫療服務，守護您與家人的健康</p>
+      </div>
+      <div class="dept-card reveal" style="transition-delay:0.3s">
+        <div class="dept-icon">👂</div>
+        <div class="dept-name">耳鼻喉科</div>
+        <div class="dept-items">
+          <div class="dept-item">過敏性鼻炎、慢性咳嗽</div>
+          <div class="dept-item">耳鳴眩暈</div>
+          <div class="dept-item">口腔喉嚨不適</div>
+          <div class="dept-item">睡眠呼吸中止症</div>
         </div>
-        
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Symptoms Section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">服務項目</h2>
-      <div class="about-grid">
-        
-        <div class="about-text">
-          <h3>一般門診</h3>
-          <ul>
-            
-            <li>感冒發燒</li>
-            
-            <li>頭痛眩暈</li>
-            
-            <li>腸胃不適</li>
-            
-            <li>高血壓、糖尿病慢性病控制</li>
-            
-          </ul>
-        </div>
-        
-        <div class="about-text">
-          <h3>眼科</h3>
-          <ul>
-            
-            <li>視力模糊</li>
-            
-            <li>眼睛乾澀</li>
-            
-            <li>白內障術後追蹤</li>
-            
-            <li>學童視力保健</li>
-            
-          </ul>
-        </div>
-        
-        <div class="about-text">
-          <h3>耳鼻喉科</h3>
-          <ul>
-            
-            <li>過敏性鼻炎</li>
-            
-            <li>慢性咳嗽</li>
-            
-            <li>耳鳴眩暈</li>
-            
-            <li>口腔喉嚨不適</li>
-            
-          </ul>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Doctors Section -->
-  <section id="doctors" class="section bg-light">
-    <div class="container">
+<!-- Doctors -->
+<section class="doctors section" id="doctors">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">Our Team</p>
       <h2 class="section-title">醫師團隊</h2>
-      <div class="menu-grid">
-        
-        <div class="menu-card">
-          <h3>王建民 醫師</h3>
-          <p class="price">家庭醫學科主任</p>
-          <p class="desc"><strong>學歷：</strong>台大醫學院醫學系畢業</p>
-          <p class="desc"><strong>經歷：</strong>前台北榮總家庭醫學科主治醫師，20年臨床經驗</p>
+      <div class="divider"></div>
+    </div>
+    <div class="doctors-grid">
+      <div class="doctor-card reveal">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&q=80" alt="王建民醫師">
+        <div class="doctor-body">
+          <div class="doctor-name">王建民 醫師</div>
+          <div class="doctor-title">家庭醫學科主任</div>
+          <div class="doctor-info">
+            <div class="doctor-info-row"><span class="doctor-info-label">學歷：</span>台大醫學院醫學系</div>
+            <div class="doctor-info-row"><span class="doctor-info-label">經歷：</span>前台北榮總家庭醫學科主治醫師，20年臨床經驗</div>
+          </div>
         </div>
-        
-        <div class="menu-card">
-          <h3>陳美玲 醫師</h3>
-          <p class="price">眼科主治醫師</p>
-          <p class="desc"><strong>學歷：</strong>成大醫學院眼科碩士</p>
-          <p class="desc"><strong>經歷：</strong>前高雄長庚眼科主治醫師，專精白內障與近視雷射手術</p>
+      </div>
+      <div class="doctor-card reveal" style="transition-delay:0.15s">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="陳美玲醫師">
+        <div class="doctor-body">
+          <div class="doctor-name">陳美玲 醫師</div>
+          <div class="doctor-title">眼科主治醫師</div>
+          <div class="doctor-info">
+            <div class="doctor-info-row"><span class="doctor-info-label">學歷：</span>成大醫學院眼科碩士</div>
+            <div class="doctor-info-row"><span class="doctor-info-label">經歷：</span>前高雄長庚眼科主治醫師，專精白內障與近視雷射</div>
+          </div>
         </div>
-        
-        <div class="menu-card">
-          <h3>林志偉 醫師</h3>
-          <p class="price">耳鼻喉科主治醫師</p>
-          <p class="desc"><strong>學歷：</strong>馬偕醫學院醫學系畢業</p>
-          <p class="desc"><strong>經歷：</strong>前林口長庚耳鼻喉科主治醫師，專精過敏性鼻炎與睡眠呼吸中止症</p>
+      </div>
+      <div class="doctor-card reveal" style="transition-delay:0.3s">
+        <img class="doctor-img" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="林志偉醫師">
+        <div class="doctor-body">
+          <div class="doctor-name">林志偉 醫師</div>
+          <div class="doctor-title">耳鼻喉科主治醫師</div>
+          <div class="doctor-info">
+            <div class="doctor-info-row"><span class="doctor-info-label">學歷：</span>馬偕醫學院醫學系</div>
+            <div class="doctor-info-row"><span class="doctor-info-label">經歷：</span>前林口長庚耳鼻喉科主治，專精過敏性鼻炎</div>
+          </div>
         </div>
-        
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Hours Section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">門診時間</h2>
-      <div class="hours-list">
-        
-        <div class="hours-item">
-          <span class="day">週一至週五</span>
-          <span class="time">08:00 - 17:00</span>
-        </div>
-        
-        <div class="hours-item">
-          <span class="day">週六</span>
-          <span class="time">08:00 - 12:00</span>
-        </div>
-        
-        <div class="hours-item">
-          <span class="day">週日</span>
-          <span class="time">公休</span>
-        </div>
-        
-      </div>
+<!-- Hours -->
+<section class="hours-section">
+  <div class="hours-inner container">
+    <div class="hours-left reveal">
+      <h2>門診時間</h2>
+      <p>如需緊急就醫，請撥打急診或直接來院，我們的醫師團隊隨時為您服務。</p>
     </div>
-  </section>
+    <div class="hours-sep"></div>
+    <div class="hours-right reveal">
+      <div class="hours-row"><span class="hours-day">週一 ─ 週五</span><span class="hours-time">08:00 – 17:00</span></div>
+      <div class="hours-row"><span class="hours-day">週六</span><span class="hours-time">08:00 – 12:00</span></div>
+      <div class="hours-row"><span class="hours-day">週日</span><span class="hours-time">公休</span></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-light">
-    <div class="container">
+<!-- Contact -->
+<section class="contact-section section" id="contact">
+  <div class="contact-grid container">
+    <div class="reveal">
+      <p class="section-eyebrow">Contact</p>
       <h2 class="section-title">聯絡我們</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-item">
-            <span class="icon">📍</span>
-            <div>
-              <strong>地址</strong>
-              <p>新北市板橋區中山路789號</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">📞</span>
-            <div>
-              <strong>電話</strong>
-              <p><a href="tel:03-456-7890">03-456-7890</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <p><a href="mailto:service@healthclinic.com">service@healthclinic.com</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">💬</span>
-            <div>
-              <strong>LINE</strong>
-              <p><a href="https://line.me/ti/p/~@healthclinic" target="_blank">@healthclinic</a></p>
-            </div>
-          </div>
-          <a href="https://line.me/ti/p/~@healthclinic" target="_blank" class="btn-line">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
-            加入 LINE 預約
-          </a>
+      <div class="divider"></div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info-text"><strong>地址</strong><span>新北市板橋區中山路789號</span></div>
         </div>
-        <div class="contact-form">
-          <form id="contactForm" action="#" method="post">
-            <div class="form-group">
-              <label for="name">姓名</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">電話</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="message">看診科別與症狀</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">送出預約</button>
-          </form>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info-text"><strong>電話</strong><span><a href="tel:03-456-7890">03-456-7890</a></span></div>
         </div>
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info-text"><strong>Email</strong><span>service@healthclinic.com</span></div>
         </div>
+      </div>
+      <a href="https://line.me/ti/p/~@healthclinic" class="btn-line-full" target="_blank">💬 加入 LINE 線上預約</a>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>健康守護診所</h3>
-          <p>專業醫療，守護您與家人的健康</p>
+    <div class="reveal">
+      <p class="section-eyebrow">Appointment</p>
+      <h2 class="section-title">線上預約</h2>
+      <div class="divider"></div>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-group"><label class="form-label">姓名</label><input class="form-input" type="text" placeholder="患者姓名"></div>
+        <div class="form-group"><label class="form-label">電話</label><input class="form-input" type="tel" placeholder="聯絡電話"></div>
+        <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="電子信箱"></div>
+        <div class="form-group">
+          <label class="form-label">看診科別</label>
+          <select class="form-select">
+            <option value="">請選擇科別</option>
+            <option>家庭醫學科</option>
+            <option>眼科</option>
+            <option>耳鼻喉科</option>
+          </select>
         </div>
-        <div class="footer-links">
-          <a href="#home">首頁</a>
-          <a href="#departments">科別介紹</a>
-          <a href="#doctors">醫師團隊</a>
-          <a href="#contact">聯絡我們</a>
-        </div>
-        <div class="footer-social">
-          
-          
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 健康守護診所 All Rights Reserved.</p>
-      </div>
+        <div class="form-group"><label class="form-label">症狀說明</label><textarea class="form-textarea" placeholder="請簡述症狀或看診需求…"></textarea></div>
+        <button class="btn-submit" type="submit">送出預約</button>
+      </form>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="main.js"></script>
+<footer>
+  <div class="footer-logo"><div class="footer-logo-icon">🏥</div>健康守護診所</div>
+  <nav class="footer-links">
+    <a href="#departments">科別介紹</a>
+    <a href="#doctors">醫師團隊</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
+  <span class="footer-copy">© 2024 健康守護診所 All Rights Reserved.</span>
+</footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+function closeMobile(){document.getElementById('navMobile').classList.remove('open');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
 </body>
 </html>

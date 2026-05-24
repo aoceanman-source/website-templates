@@ -1,250 +1,253 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="創新科技有限公司 - 用科技創造價值，讓改變持續發生">
-  <title>創新科技有限公司</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="創新科技有限公司 - 用科技創造價值，讓改變持續發生">
+<title>創新科技有限公司</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">創新科技有限公司</a>
-      <button class="nav-toggle" id="navToggle" aria-label="選單">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home">首頁</a></li>
-        <li><a href="#services">服務項目</a></li>
-        <li><a href="#team">團隊成員</a></li>
-        <li><a href="#contact">聯絡我們</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header id="home" class="hero">
-    <div class="hero-slider" id="heroSlider">
-      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200') center/cover no-repeat;"></div>
-      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200') center/cover no-repeat;"></div>
-    </div>
-    <div class="hero-content">
-      <h1>創新科技有限公司</h1>
-      <p class="tagline">用科技創造價值，讓改變持續發生</p>
-      <a href="#contact" class="btn-primary">與我們聯絡</a>
-    </div>
-    <div class="slider-controls">
-      <button class="slider-btn prev" id="prevSlide">❮</button>
-      <button class="slider-btn next" id="nextSlide">❯</button>
-    </div>
-  </header>
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    創新科技
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">服務項目</a></li>
+    <li><a href="#team">團隊成員</a></li>
+    <li><a href="#contact">聯絡我們</a></li>
+    <li><a href="#contact" class="nav-cta">與我們合作</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+<nav class="nav-mobile" id="navMobile">
+  <a href="#services" onclick="closeMobile()">服務項目</a>
+  <a href="#team" onclick="closeMobile()">團隊成員</a>
+  <a href="#contact" onclick="closeMobile()">聯絡我們</a>
+</nav>
 
-  <!-- Services Section -->
-  <section id="services" class="section bg-light">
-    <div class="container">
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner container">
+    <div>
+      <div class="hero-badge">🚀 Est. 2018 · 企業數位轉型</div>
+      <h1 class="hero-title">
+        <span class="t-white">用科技</span><br>
+        <span class="t-blue">創造價值</span><br>
+        <span class="t-muted">讓改變持續發生</span>
+      </h1>
+      <p class="hero-desc">從網站開發到系統整合，由資深技術團隊與創意設計師共同打造，幫助企業在數位時代取得競爭優勢。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-electric">開始合作 →</a>
+        <a href="#services" class="btn-ghost-dark">查看服務</a>
+      </div>
+      <div class="hero-metrics">
+        <div>
+          <span class="hero-metric-num">50<span>+</span></span>
+          <div class="hero-metric-label">成功案例</div>
+        </div>
+        <div>
+          <span class="hero-metric-num">6<span>+</span></span>
+          <div class="hero-metric-label">年產業經驗</div>
+        </div>
+        <div>
+          <span class="hero-metric-num">98<span>%</span></span>
+          <div class="hero-metric-label">客戶滿意度</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <div class="t-dot r"></div><div class="t-dot y"></div><div class="t-dot g"></div>
+          <div class="terminal-title">innovate-tech · dashboard.tsx</div>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span><span class="t-text"><span class="t-comment">// 您的數位轉型從這裡開始</span></span></div>
+          <div class="t-line"><span class="t-prompt">→</span><span class="t-text"><span class="t-key">const</span> client = <span class="t-str">"您的品牌"</span></span></div>
+          <div class="t-line"><span class="t-prompt">→</span><span class="t-text"><span class="t-key">const</span> solution = await <span class="t-str">buildWebsite</span>(client)</span></div>
+          <div class="t-line"><span class="t-prompt">✓</span><span class="t-text"><span class="t-ok">專案分析完成</span></span></div>
+          <div class="t-line"><span class="t-prompt">✓</span><span class="t-text"><span class="t-ok">設計稿確認</span> · 3 頁</span></div>
+          <div class="t-line"><span class="t-prompt">✓</span><span class="t-text"><span class="t-ok">部署成功</span> → <span class="t-str">yoursite.com</span></span></div>
+          <div class="t-line"><span class="t-prompt">→</span><span class="t-text">轉換率 ↑ <span class="t-num">+240%</span></span></div>
+        </div>
+      </div>
+      <div class="hero-service-pills">
+        <div class="service-pill">網站開發</div>
+        <div class="service-pill">系統整合</div>
+        <div class="service-pill">APP 開發</div>
+        <div class="service-pill">顧問諮詢</div>
+        <div class="service-pill">雲端架構</div>
+        <div class="service-pill">SEO 優化</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">Services</p>
       <h2 class="section-title">服務項目</h2>
-      <div class="menu-grid">
-        
-        <div class="menu-card">
-          <h3>客製化網站開發</h3>
-          <p class="price">NT$ 50,000 起</p>
-          <p class="desc">從企業形象網站到電子商務平台，打造專屬您的線上品牌</p>
-        </div>
-        
-        <div class="menu-card">
-          <h3>系統整合服務</h3>
-          <p class="price">NT$ 80,000 起</p>
-          <p class="desc">ERP、CRM既有系統對接，串接金流、物流、會員系統</p>
-        </div>
-        
-        <div class="menu-card">
-          <h3>資訊顧問諮詢</h3>
-          <p class="price">NT$ 3,000/小時</p>
-          <p class="desc">資安評估、系統健檢、數位轉型規劃，由資深顧問一對一服務</p>
-        </div>
-        
-        <div class="menu-card">
-          <h3>APP行動應用開發</h3>
-          <p class="price">NT$ 120,000 起</p>
-          <p class="desc">iOS/Android原生及跨平台應用開發，支援上架一條龍服務</p>
-        </div>
-        
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">🌐</div>
+        <div class="service-name">客製化網站開發</div>
+        <div class="service-price">NT$ 50,000 起</div>
+        <div class="service-desc">從企業形象網站到電子商務平台，RWD 全裝置適配，打造專屬您的線上品牌，提升轉換率。</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.1s">
+        <div class="service-num">02</div>
+        <div class="service-icon">🔗</div>
+        <div class="service-name">系統整合服務</div>
+        <div class="service-price">NT$ 80,000 起</div>
+        <div class="service-desc">ERP、CRM 既有系統對接，串接金流、物流、會員系統，讓您的商業流程完全自動化。</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.2s">
+        <div class="service-num">03</div>
+        <div class="service-icon">💡</div>
+        <div class="service-name">資訊顧問諮詢</div>
+        <div class="service-price">NT$ 3,000 / 小時</div>
+        <div class="service-desc">資安評估、系統健檢、數位轉型規劃，由資深顧問一對一服務，給您最務實的建議。</div>
+      </div>
+      <div class="service-card reveal" style="transition-delay:0.3s">
+        <div class="service-num">04</div>
+        <div class="service-icon">📱</div>
+        <div class="service-name">APP 行動應用開發</div>
+        <div class="service-price">NT$ 120,000 起</div>
+        <div class="service-desc">iOS / Android 原生及跨平台應用開發，支援 App Store、Google Play 上架一條龍服務。</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">關於我們</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>創新科技有限公司 成立於 2018 年，專注於提供企業數位轉型全方位解決方案。</p>
-          <p>我們的團隊由具有豐富產業經驗的資深技術專家與創意設計師組成，致力於幫助客戶在數位時代取得竞争优势。</p>
-          <p>從初期的免費顧問諮詢到專案完成後的持續售後服務，我們提供一條龍的專業服務，確保每一位客戶都能獲得最佳的解決方案。</p>
-        </div>
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="團隊討論">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section id="team" class="section bg-light">
-    <div class="container">
+<!-- Team -->
+<section class="team-section section" id="team">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">Our Team</p>
       <h2 class="section-title">專業團隊</h2>
-      <div class="menu-grid">
-        
-        <div class="menu-card">
-          <h3>陳志遠</h3>
-          <p class="price">執行長</p>
-          <p class="desc">台灣大學資訊工程研究所畢業，曾任聯發科資深工程師，連續創業家</p>
+      <div class="divider"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <img class="team-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="陳志遠">
+        <div class="team-body">
+          <div class="team-name">陳志遠</div>
+          <div class="team-title">CEO · 執行長</div>
+          <div class="team-bio">台大資工研究所，曾任聯發科資深工程師，連續創業家</div>
         </div>
-        
-        <div class="menu-card">
-          <h3>黃怡君</h3>
-          <p class="price">技術總監</p>
-          <p class="desc">清華大學資訊系畢業，15年網頁與系統開發經驗，專精雲端架構設計</p>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.1s">
+        <img class="team-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="黃怡君">
+        <div class="team-body">
+          <div class="team-name">黃怡君</div>
+          <div class="team-title">CTO · 技術總監</div>
+          <div class="team-bio">清大資訊系，15年網頁與系統開發經驗，專精雲端架構</div>
         </div>
-        
-        <div class="menu-card">
-          <h3>劉明哲</h3>
-          <p class="price">產品總監</p>
-          <p class="desc">交大管理研究所畢業，過去於Google擔任產品經理，擅長用戶體驗優化</p>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.2s">
+        <img class="team-img" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="劉明哲">
+        <div class="team-body">
+          <div class="team-name">劉明哲</div>
+          <div class="team-title">CPO · 產品總監</div>
+          <div class="team-bio">交大管研所，前 Google PM，擅長用戶體驗優化</div>
         </div>
-        
-        <div class="menu-card">
-          <h3>林雨彤</h3>
-          <p class="price">設計總監</p>
-          <p class="desc">皇家藝術學院互動設計碩士，曾參與多個國際品牌視覺形象規劃</p>
+      </div>
+      <div class="team-card reveal" style="transition-delay:0.3s">
+        <img class="team-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="林雨彤">
+        <div class="team-body">
+          <div class="team-name">林雨彤</div>
+          <div class="team-title">CDO · 設計總監</div>
+          <div class="team-bio">皇家藝術學院互動設計碩士，多項國際品牌視覺規劃</div>
         </div>
-        
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Hours Section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">服務時間</h2>
-      <div class="hours-list">
-        
-        <div class="hours-item">
-          <span class="day">週一至週五</span>
-          <span class="time">09:00 - 18:00</span>
-        </div>
-        
-        <div class="hours-item">
-          <span class="day">週六、週日</span>
-          <span class="time">公休</span>
-        </div>
-        
-      </div>
+<!-- Hours -->
+<section class="hours-section">
+  <div class="hours-inner container">
+    <div class="hours-left reveal">
+      <h2>服務時間</h2>
+      <p>有任何數位轉型需求，歡迎在服務時間內聯絡我們，提供免費 30 分鐘初步諮詢。</p>
     </div>
-  </section>
+    <div class="hours-list reveal">
+      <div class="hours-row"><span class="hours-day">週一 ─ 週五</span><span class="hours-time">09:00 – 18:00</span></div>
+      <div class="hours-row"><span class="hours-day">週六 ─ 週日</span><span class="hours-time">公休</span></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-light">
-    <div class="container">
+<!-- Contact -->
+<section class="contact-section section" id="contact">
+  <div class="contact-grid container">
+    <div class="reveal">
+      <p class="section-eyebrow">Contact</p>
       <h2 class="section-title">聯絡我們</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="info-item">
-            <span class="icon">📍</span>
-            <div>
-              <strong>地址</strong>
-              <p>台北市內湖區瑞光路366號18樓</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">📞</span>
-            <div>
-              <strong>電話</strong>
-              <p><a href="tel:02-8772-1234">02-8772-1234</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <p><a href="mailto:contact@innovatetech.tw">contact@innovatetech.tw</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <span class="icon">💬</span>
-            <div>
-              <strong>LINE</strong>
-              <p><a href="https://line.me/ti/p/~@innovatetech" target="_blank">@innovatetech</a></p>
-            </div>
-          </div>
-          <a href="https://line.me/ti/p/~@innovatetech" target="_blank" class="btn-line">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
-            加入 LINE 洽詢
-          </a>
+      <div class="divider"></div>
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-info-text"><strong>地址</strong><span>台北市內湖區瑞光路366號18樓</span></div>
         </div>
-        <div class="contact-form">
-          <form id="contactForm" action="#" method="post">
-            <div class="form-group">
-              <label for="name">姓名</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">電話</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="message">需求說明</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">送出訊息</button>
-          </form>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info-text"><strong>電話</strong><span><a href="tel:02-8772-1234">02-8772-1234</a></span></div>
         </div>
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info-text"><strong>Email</strong><span>contact@innovatetech.tw</span></div>
         </div>
+      </div>
+      <a href="https://line.me/ti/p/~@innovatetech" class="btn-line-full" target="_blank">💬 加入 LINE 免費諮詢</a>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614!2d121.5567!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAxJzU3LjAiTiAxMjHCsDMzJzI3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>創新科技有限公司</h3>
-          <p>用科技創造價值，讓改變持續發生</p>
-        </div>
-        <div class="footer-links">
-          <a href="#home">首頁</a>
-          <a href="#services">服務項目</a>
-          <a href="#team">團隊成員</a>
-          <a href="#contact">聯絡我們</a>
-        </div>
-        <div class="footer-social">
-          {{#social.facebook}}
-          <a href="https://facebook.com/innovatetech" target="_blank" aria-label="Facebook">📘</a>
-          {{/social.facebook}}
-          {{#social.instagram}}
-          <a href="https://instagram.com/innovatetech.tw" target="_blank" aria-label="Instagram">📷</a>
-          {{/social.instagram}}
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 創新科技有限公司 All Rights Reserved.</p>
-      </div>
+    <div class="reveal">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title">開始合作</h2>
+      <div class="divider"></div>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-group"><label class="form-label">姓名</label><input class="form-input" type="text" placeholder="您的姓名"></div>
+        <div class="form-group"><label class="form-label">電話</label><input class="form-input" type="tel" placeholder="聯絡電話"></div>
+        <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="電子信箱"></div>
+        <div class="form-group"><label class="form-label">需求說明</label><textarea class="form-textarea" placeholder="請描述您的專案需求、預算、時程等…"></textarea></div>
+        <button class="btn-submit" type="submit">送出需求 →</button>
+      </form>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="main.js"></script>
+<footer>
+  <div class="footer-logo"><div class="footer-logo-dot"></div>創新科技有限公司</div>
+  <nav class="footer-links">
+    <a href="#services">服務項目</a>
+    <a href="#team">團隊成員</a>
+    <a href="#contact">聯絡我們</a>
+  </nav>
+  <span class="footer-copy">© 2024 創新科技有限公司 All Rights Reserved.</span>
+</footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>30));
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+function closeMobile(){document.getElementById('navMobile').classList.remove('open');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+</script>
 </body>
 </html>
