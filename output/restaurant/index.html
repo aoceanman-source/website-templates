@@ -1,361 +1,540 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="甜蜜時光餐廳 - 用心料理，甜蜜每一刻">
-<title>甜蜜時光餐廳</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="甜蜜時光餐廳 - 用心料理，甜蜜每一刻">
+  <title>甜蜜時光餐廳</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Nav -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo">甜蜜時光</a>
-  <ul class="nav-links">
-    <li><a href="#about">關於我們</a></li>
-    <li><a href="#menu">菜單</a></li>
-    <li><a href="#contact">聯絡我們</a></li>
-  </ul>
-  <div class="nav-hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-<nav class="nav-mobile" id="navMobile">
-  <a href="#about" onclick="closeMobile()">關於我們</a>
-  <a href="#menu" onclick="closeMobile()">菜單</a>
-  <a href="#contact" onclick="closeMobile()">聯絡我們</a>
-</nav>
-
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-texture"></div>
-  <div class="hero-slideshow">
-    <div class="hero-slide active"></div>
-    <div class="hero-slide"></div>
-    <div class="hero-slide"></div>
-  </div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Fine Dining · Since 2018</p>
-    <h1 class="hero-title">甜蜜時光<em>餐廳</em></h1>
-    <p class="hero-subtitle">用心料理，甜蜜每一刻</p>
-    <a href="#menu" class="hero-cta">探索菜單 <span>↓</span></a>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-bar"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- About -->
-<section class="about section" id="about">
-  <div class="about-grid container">
-    <div class="about-img-wrap reveal">
-      <img class="about-img-main" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="餐廳內部">
-      <img class="about-img-accent" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="料理">
-      <div class="about-badge">
-        <span class="about-badge-num">18+</span>
-        <span class="about-badge-text">年料理傳承</span>
-      </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">甜蜜時光餐廳</a>
+      <button class="nav-toggle" id="navToggle" aria-label="選單">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#menu">菜單</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
     </div>
-    <div class="about-text reveal">
-      <p class="section-eyebrow">About Us</p>
-      <h2 class="section-title">歡迎來到<em>甜蜜時光</em></h2>
-      <div class="divider"></div>
-      <p>我們致力於為您提供最美味的料理與最溫暖的用餐體驗。每一道菜品都經過主廚精心烹調，選用最新鮮的食材，讓您品嚐到幸福的滋味。</p>
-      <p>無論是家庭聚會、商務用餐，或是浪漫的兩人世界，我們都為您準備了最舒適的空間與最用心的服務。</p>
-    </div>
-  </div>
-</section>
-
-<!-- Menu -->
-<section class="menu section" id="menu">
-  <div class="menu-header container reveal">
-    <p class="section-eyebrow">Our Menu</p>
-    <h2 class="section-title">精選<em>菜單</em></h2>
-    <div class="divider center"></div>
-  </div>
-  <div class="menu-filter container reveal">
-    <button class="active" data-cat="all">全部</button>
-    <button data-cat="main">主餐</button>
-    <button data-cat="pasta">義式料理</button>
-    <button data-cat="salad">前菜沙拉</button>
-    <button data-cat="seafood">日式海鮮</button>
-    <button data-cat="dessert">甜點</button>
-    <button data-cat="snack">開胃小點</button>
-  </div>
-  <div class="menu-grid container" id="menuGrid">
-
-    <div class="menu-item" data-cat="main">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=300&q=80" alt="牛排">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">香煎 Choice 肋眼牛排</span>
-            <span class="menu-price">TWD 880</span>
-          </div>
-          <div class="menu-cat-tag">主廚推薦</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            精選美國 Choice 等級肋眼牛排，乾式熟成14天後香煎鎖住肉汁，搭配迷迭香奶油與季節烤蔬菜。
-            <div class="allergen-tags">
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="pasta">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=300&q=80" alt="義大利麵">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">蒜香奶油鮮蝦義大利麵</span>
-            <span class="menu-price">TWD 380</span>
-          </div>
-          <div class="menu-cat-tag">義式料理</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            義大利進口杜蘭小麥寬麵，拌入新鮮大白蝦、蒜香奶油醬與帕瑪森起司。
-            <div class="allergen-tags">
-              <span class="allergen-tag seafood">🦐 海鮮</span>
-              <span class="allergen-tag gluten">🌾 麩質</span>
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="pasta">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=300&q=80" alt="燉飯">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">松露野菇燉飯</span>
-            <span class="menu-price">TWD 420</span>
-          </div>
-          <div class="menu-cat-tag">義式料理</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            義大利進口 Arborio 米，慢火燉煮加入新鮮松露醬與多種野菇，米粒彈牙，松露香氣高雅。
-            <div class="allergen-tags">
-              <span class="allergen-tag gluten">🌾 麩質</span>
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="salad">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=300&q=80" alt="沙拉">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">凱撒沙拉 with 脆培根</span>
-            <span class="menu-price">TWD 220</span>
-          </div>
-          <div class="menu-cat-tag">前菜沙拉</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            新鮮羅蔓生菜、帕瑪森起司薄片、手工脆餅，淋上特製凱撒醬，香脆培根增添鹹香。
-            <div class="allergen-tags">
-              <span class="allergen-tag gluten">🌾 麩質</span>
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-              <span class="allergen-tag egg">🥚 蛋</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="seafood">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=300&q=80" alt="海膽">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">北海道干貝海膽軍艦</span>
-            <span class="menu-price">TWD 520</span>
-          </div>
-          <div class="menu-cat-tag">日式海鮮</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            嚴選北海道新鮮干貝與馬糞海膽，底部鋪設醋飯再以海苔包覆，大海鮮甜一口感受。
-            <div class="allergen-tags">
-              <span class="allergen-tag seafood">🦐 海鮮</span>
-              <span class="allergen-tag soy">🫘 黃豆</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="dessert">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&q=80" alt="布蕾">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">焦糖布蕾</span>
-            <span class="menu-price">TWD 150</span>
-          </div>
-          <div class="menu-cat-tag">甜點</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            法式傳統甜點，現烤焦糖脆殼，內裡滑嫩細緻，使用新鮮雞蛋與香草莢慢火烘烤。
-            <div class="allergen-tags">
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-              <span class="allergen-tag egg">🥚 蛋</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="dessert">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&q=80" alt="藍莓塔">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">藍莓塔</span>
-            <span class="menu-price">TWD 130</span>
-          </div>
-          <div class="menu-cat-tag">甜點</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            新鮮藍莓鋪滿酥脆塔皮，佐以香草卡士達餡，酸甜適中，法式經典。
-            <div class="allergen-tags">
-              <span class="allergen-tag gluten">🌾 麩質</span>
-              <span class="allergen-tag dairy">🥛 乳製品</span>
-              <span class="allergen-tag egg">🥚 蛋</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menu-item" data-cat="snack">
-      <div class="menu-item-inner">
-        <img class="menu-img" src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=300&q=80" alt="蟹餅">
-        <div class="menu-item-body">
-          <div class="menu-item-header">
-            <span class="menu-name">炸蟹餅</span>
-            <span class="menu-price">TWD 280</span>
-          </div>
-          <div class="menu-cat-tag">開胃小點</div>
-          <span class="menu-toggle">查看詳情 ↓</span>
-          <div class="menu-desc">
-            鮮甜蟹肉酥炸至金黃，外酥內軟，搭配塔塔醬與檸檬角，下酒絕配。
-            <div class="allergen-tags">
-              <span class="allergen-tag seafood">🦐 海鮮</span>
-              <span class="allergen-tag gluten">🌾 麩質</span>
-              <span class="allergen-tag egg">🥚 蛋</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Hours -->
-<section class="hours">
-  <div class="hours-inner">
-    <h2 class="hours-title reveal">用餐時間</h2>
-    <div class="hours-divider"></div>
-    <div class="hours-list reveal">
-      <div class="hours-row">
-        <span class="hours-day">週一 ─ 週五</span>
-        <span class="hours-time">11:00 – 21:00</span>
-      </div>
-      <div class="hours-row">
-        <span class="hours-day">週六 ─ 週日</span>
-        <span class="hours-time">10:00 – 22:00</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="contact section" id="contact">
-  <div class="contact-grid container">
-    <div class="reveal">
-      <p class="section-eyebrow">Find Us</p>
-      <h2 class="section-title">聯絡<em>我們</em></h2>
-      <div class="divider"></div>
-      <div class="contact-info-list">
-        <div class="contact-info-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-info-text">
-            <strong>地址</strong>
-            <span>台北市大安區仁愛路123號</span>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">📞</div>
-          <div class="contact-info-text">
-            <strong>電話</strong>
-            <span><a href="tel:02-1234-5678">02-1234-5678</a></span>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-info-text">
-            <strong>Email</strong>
-            <span>contact@sweetmoment.com</span>
-          </div>
-        </div>
-      </div>
-      <a href="https://line.me/ti/p/~@sweetmoment" class="btn-line-full" target="_blank">
-        💬 加入 LINE 立即訂位
-      </a>
-      <div class="map-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d121.5431!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzAwLjAiTiAxMjHCsDMzJzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-    <div class="reveal">
-      <p class="section-eyebrow">Reservation</p>
-      <h2 class="section-title" style="font-size:1.8rem">線上<em>訂位</em></h2>
-      <div class="divider"></div>
-      <form class="contact-form" onsubmit="return false;">
-        <div class="form-group">
-          <label class="form-label">姓名</label>
-          <input class="form-input" type="text" placeholder="您的姓名">
-        </div>
-        <div class="form-group">
-          <label class="form-label">電話</label>
-          <input class="form-input" type="tel" placeholder="聯絡電話">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input class="form-input" type="email" placeholder="電子信箱">
-        </div>
-        <div class="form-group">
-          <label class="form-label">訊息</label>
-          <textarea class="form-textarea" placeholder="訂位需求、人數、日期…"></textarea>
-        </div>
-        <button class="btn-submit" type="submit">送出訂位</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <span class="footer-logo">甜蜜時光餐廳</span>
-  <nav class="footer-links">
-    <a href="#about">關於我們</a>
-    <a href="#menu">菜單</a>
-    <a href="#contact">聯絡我們</a>
   </nav>
-  <span class="footer-copy">© 2024 甜蜜時光餐廳 All Rights Reserved.</span>
-</footer>
 
-<script src="main.js"></script>
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide active" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200') center/cover no-repeat;"></div>
+      <div class="slide" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200') center/cover no-repeat;"></div>
+    </div>
+    <div class="hero-content">
+      <h1>甜蜜時光餐廳</h1>
+      <p class="tagline">用心料理，甜蜜每一刻</p>
+      <a href="#contact" class="btn-primary">立即訂位</a>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn prev" id="prevSlide">❮</button>
+      <button class="slider-btn next" id="nextSlide">❯</button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">關於我們</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>歡迎來到 甜蜜時光餐廳！我們致力於為您提供最美味的料理與最温暖的用餐體驗。每一道菜品都經過主廚精心烹調，選用最新鮮的食材，讓您品嚐到幸福的滋味。</p>
+          <p>無論是家庭聚會、商務用餐，或是浪漫的兩人世界，我們都為您準備了最舒適的空間與最用心的服務。</p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="餐廳內部">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">精選菜單</h2>
+      <p class="menu-hint">點擊任一菜品查看詳細資訊</p>
+      <div class="menu-grid">
+        
+        <div class="menu-card expandable" data-id="menu-001">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600" alt="香煎choice肋眼牛排">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>香煎choice肋眼牛排</h3>
+              <p class="menu-category">主廚推薦</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 880</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">精選美國 Choice 等級肋眼牛排，經過乾式熟成14天後香煎，鎖住肉汁精華。搭配迷迭香奶油與季節烤蔬菜，濃郁的牛肉風味與香料完美融合，帶給您極致的味蕾享受。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-002">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600" alt="蒜香奶油鮮蝦義大利麵">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>蒜香奶油鮮蝦義大利麵</h3>
+              <p class="menu-category">義式料理</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 380</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">使用義大利進口杜蘭小麥製作的寬麵，拌入新鮮大白蝦、蒜香奶油醬與帕瑪森起司。蝦肉鮮甜Q彈，蒜香濃郁而不嗆，是一道令人回味無窮的經典義式料理。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-003">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600" alt="松露野菇炖飯">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>松露野菇炖飯</h3>
+              <p class="menu-category">義式料理</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 420</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">採用義大利進口Arborio米，慢火炖煮加入新鮮松露醬與多種野菇。奶香濃郁，米粒保有彈牙口感，每一口都散發著高雅的松露香氣，適合素食者享用。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-004">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=600" alt="凱撒沙拉 with 脆培根">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>凱撒沙拉 with 脆培根</h3>
+              <p class="menu-category">前菜沙拉</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 220</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">新鮮羅蔓生菜、帕瑪森起司薄片、手工脆餅，淋上特製凱撒沙拉醬。香脆培根增添鹹香口感，撒上新鮮研磨的黑胡椒，是一道清爽開胃的經典沙拉。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-005">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600" alt="北海道干貝海膽軍艦">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>北海道干貝海膽軍艦</h3>
+              <p class="menu-category">日式海鮮</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 520</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge soy">🫘 黃豆</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">嚴選北海道新鮮干貝與馬糞海膽，底部鋪設醋飯再以海苔包覆。干貝軟嫩、海膽鮮甜，一口咬下就能感受大海的鮮美，適合喜歡海鮮的老饕。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge soy">🫘 黃豆</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-006">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600" alt="焦糖布蕾">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>焦糖布蕾</h3>
+              <p class="menu-category">甜點</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 150</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">法式傳統甜點，使用新鮮雞蛋與香草莢慢火烘烤。上桌前現烤焦糖脆殼，敲開時發出清脆聲響，內裡是滑嫩細緻的布蕾，是完美的餐後甜點。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-007">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600" alt="藍莓塔">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>藍莓塔</h3>
+              <p class="menu-category">甜點</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 130</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">新鮮藍莓鋪滿酥脆塔皮，佐以香草卡士達餡，酸甜適中，是大人小孩都喜愛的經典法式甜點。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge dairy">🥛 乳製品</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card expandable" data-id="menu-008">
+          <div class="menu-card-inner">
+            <div class="menu-card-thumb">
+              <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=600" alt="炸蟹餅">
+              <div class="menu-card-overlay">
+                <span class="expand-icon">+</span>
+              </div>
+            </div>
+            <div class="menu-card-body">
+              <h3>炸蟹餅</h3>
+              <p class="menu-category">開胃小點</p>
+              <div class="menu-card-footer">
+                <span class="price-tag">TWD 280</span>
+                <div class="allergen-preview">
+                  
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Expanded Detail Panel -->
+          <div class="menu-card-detail">
+            <div class="detail-content">
+              <p class="detail-desc">鮮甜蟹肉混合馬鈴薯澱粉酥炸至金黃，外酥內軟。搭配塔塔醬與檸檬角，簡單卻美味的下酒好菜。</p>
+              <div class="detail-allergens">
+                <span class="allergen-label">過敏原：</span>
+                
+                  <span class="allergen-badge seafood">🦐 海鮮</span>
+                  
+                  <span class="allergen-badge gluten">🌾 麩質</span>
+                  
+                  <span class="allergen-badge egg">🥚 蛋</span>
+                  
+              </div>
+              <button class="btn-collapse" aria-label="收合">
+                <span>▲ 收合</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">營業時間</h2>
+      <div class="hours-list">
+        
+        <div class="hours-item">
+          <span class="day">週一至週五</span>
+          <span class="time">11:00 - 21:00</span>
+        </div>
+        
+        <div class="hours-item">
+          <span class="day">週六、週日</span>
+          <span class="time">10:00 - 22:00</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">聯絡我們</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="icon">📍</span>
+            <div>
+              <strong>地址</strong>
+              <p>台北市大安區仁愛路123號</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">📞</span>
+            <div>
+              <strong>電話</strong>
+              <p><a href="tel:02-1234-5678">02-1234-5678</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:contact@sweetmoment.com">contact@sweetmoment.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="icon">💬</span>
+            <div>
+              <strong>LINE</strong>
+              <p><a href="https://line.me/ti/p/~@sweetmoment" target="_blank">@sweetmoment</a></p>
+            </div>
+          </div>
+          <a href="https://line.me/ti/p/~@sweetmoment" target="_blank" class="btn-line">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .349-.285.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626V9.863h-2.843c-.345 0-.627-.28-.627-.626 0-.345.282-.624.627-.624h2.843v-1.12h-1.755c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h2.386c.345 0 .624.28.624.629v2.483H8.052c-.349 0-.63.285-.63.63 0 .349.285.63.63.63h1.125v1.125H8.052c-.349 0-.63.285-.63.63 0 .345.285.63.63.63h1.125v.397c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863H5.078c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125H4.27c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h1.808v-1.12H4.27c-.349 0-.63-.28-.63-.629 0-.349.285-.626.63-.626h1.808v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63h-.397v1.125zm-4.514 0H8.52v1.125h6.331v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v2.483h1.125v-1.125h.397c.349 0 .63.285.63.63 0 .349-.285.63-.63.63H16.34v1.125h1.755c.349 0 .63.283.63.63 0 .344-.285.624-.63.624h-2.386c-.345 0-.627-.28-.627-.626v-2.483H14.33v2.483c0 .344-.279.624-.627.624-.345 0-.627-.28-.627-.624V9.863h-.397c-.345 0-.624-.28-.624-.626 0-.349.279-.63.624-.63h.397v-1.125h-.397c-.349 0-.63-.285-.63-.63 0-.349.285-.63.63-.63h.397v-.397c0-.344.279-.624.627-.624.349 0 .63.28.63.624v.397h.397c.345 0 .627.285.627.63 0 .349-.282.63-.627.63H13.59v1.125h1.755c.345 0 .627.283.627.63 0 .344-.282.624-.627.624H12.36c-.349 0-.63-.28-.63-.624V9.863zm-1.808 3.373H8.52v1.125h4.523v-1.125zm-4.523 2.25H8.52v1.125h4.523v-1.125z"/></svg>
+            加入 LINE 諮詢
+          </a>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+              <label for="name">姓名</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">電話</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="message">訊息</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">送出訊息</button>
+          </form>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d121.5431!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDAyJzAwLjAiTiAxMjHCsDMzJzA3LjIiRQ!5e0!3m2!1szh-TW!2stw!4v1600000000000!5m2!1szh-TW!2stw" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>甜蜜時光餐廳</h3>
+          <p>用心料理，甜蜜每一刻</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">首頁</a>
+          <a href="#about">關於我們</a>
+          <a href="#menu">菜單</a>
+          <a href="#contact">聯絡我們</a>
+        </div>
+        <div class="footer-social">
+          {{#social.facebook}}
+          <a href="https://facebook.com/sweetmoment" target="_blank" aria-label="Facebook">📘</a>
+          {{/social.facebook}}
+          {{#social.instagram}}
+          <a href="https://instagram.com/sweetmoment" target="_blank" aria-label="Instagram">📷</a>
+          {{/social.instagram}}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 甜蜜時光餐廳 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
