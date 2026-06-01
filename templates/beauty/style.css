@@ -298,6 +298,14 @@ i { line-height: 1; }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 .gallery-overlay span { color: white; font-weight: 600; font-size: 1.1rem; }
 
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== Services ===== */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .service-card {
@@ -452,7 +460,8 @@ i { line-height: 1; }
 /* ===== Responsive ===== */
 @media (max-width: 992px) {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-map { order: -1; margin-bottom: 20px; }
   .footer-content { grid-template-columns: 1fr 1fr; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
 }
